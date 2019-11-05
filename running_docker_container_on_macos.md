@@ -6,7 +6,7 @@ The following instructions are adapted from the [CROPS eSDK documenation](https:
 
 ## 1. Install Docker
 
-This should be straightforward using the installers provided on [the official Docker website](https://docs.docker.com/docker-for-mac/)
+This should be straightforward using instructions to setup Docker Desktop for macOS on [the official Docker website](https://docs.docker.com/docker-for-mac/).
 
 ## 2. Set up Docker Volume and Samba share
 
@@ -40,7 +40,7 @@ sudo ifconfig lo0 127.0.0.2 alias up
 
 Download the [toolchain installer](https://github.com/elk-audio/elkpi-sdk/releases/download/v0.1/elk-glibc-x86_64-elk-sika-image-dev-aarch64-raspberrypi3-64-toolchain-1.0.sh).
 
-Then, open _Finder_, hit _⌘+K_ and in the "_Server Address_" field type **`smb://127.0.0.2/wordir`** and click _Connect_ choosing to continue as guest.
+Then, open _Finder_, hit _⌘+K_ and in the "_Server Address_" field type **`smb://127.0.0.2/workdir`** and click _Connect_ choosing to continue as guest.
 
 You can now copy files to/from the Container Volume by using this folder. Copy the installer toolchain to it to proceed with the installation.
 
