@@ -44,7 +44,7 @@ Then, open _Finder_, hit _⌘+K_ and in the "_Server Address_" field type **`smb
 
 You can now copy files to/from the Container Volume by using this folder. Copy the installer toolchain to it to proceed with the installation.
 
-### Install the toolchain
+## 3. Install the toolchain
 
 Assuming you have used the paths suggested in the previous steps, run:
 
@@ -54,7 +54,7 @@ docker run --rm -it -v elkvolume:/workdir crops/extsdk-container --url /workdir/
 
 This will exctract and setup the toolchain in your Docker container. The whole process should take few minutes and when finished you will have access to a shell with the environment properly set up for cross-compilation.
 
-### Run the toolchain
+## 4. Run the toolchain
 
 After installation, you can quickly setup the toolchain again from a new terminal by typing:
 
