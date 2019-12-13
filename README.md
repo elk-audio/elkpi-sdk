@@ -3,14 +3,14 @@ Yocto cross-compiling toolchains for Elk on Raspberry Pi
 
 This is a meta-repository to host the [Yocto](https://www.yoctoproject.org/) toolchain needed to cross-compile binaries for Elk on Raspberry Pi 3 64bit using your host computer.
 
-The [latest toolchain installer](https://github.com/elk-audio/elkpi-sdk/releases/download/v0.1/elk-glibc-x86_64-elk-sika-image-dev-aarch64-raspberrypi3-64-toolchain-1.0.sh) is available under the [Releases section](https://github.com/elk-audio/elkpi-sdk/releases).
+The [latest toolchain installer](https://github.com/elk-audio/elkpi-sdk/releases/download/v0.6/elk-glibc-x86_64-elk-sika-image-dev-cortexa7t2hf-neon-vfpv4-raspberrypi3-toolchain-1.0.sh) is available under the [Releases section](https://github.com/elk-audio/elkpi-sdk/releases).
 
 ## Instructions
 
 On pretty much any modern Linux distribution, you can simply run the self-extracting shell script and enter the desired extraction path when prompted. Then, simply source the environment script:
 
 ```bash
-$ source /path/to/sdk/environment-setup-aarch64-elk-linux
+$ source /path/to/environment-setup-cortexa7t2hf-neon-vfpv4-elk-linux-gnueabi
 ```
 
 and you're ready to go. The environment script modifies the default toolchain for the session, so just e.g. running `make` or `cmake` will generate a binary for the target architecture.
