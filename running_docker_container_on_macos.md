@@ -38,19 +38,21 @@ sudo ifconfig lo0 127.0.0.2 alias up
 
 ### Copy the toolchain installation script to the Docker Volume
 
-Download the [toolchain installer](https://github.com/elk-audio/elkpi-sdk/releases/download/v0.1/elk-glibc-x86_64-elk-sika-image-dev-aarch64-raspberrypi3-64-toolchain-1.0.sh).
+Download the release of the [toolchain installer](https://github.com/elk-audio/elkpi-sdk/releases/) corresponding to the ELK Audio OS version installed in your board.
 
 Then, open _Finder_, hit _⌘+K_ and in the "_Server Address_" field type **`smb://127.0.0.2/workdir`** and click _Connect_ choosing to continue as guest.
 
-You can now copy files to/from the Container Volume by using this folder. Copy the installer toolchain to it to proceed with the installation.
+You can now copy files to/from the Container Volume by using this folder. Copy the installer toolchain (e.g. `elk-glibc-x86_64-elk-sika-image-dev-cortexa7t2hf-neon-vfpv4-raspberrypi3-toolchain-1.0.sh`) to it to proceed with the installation.
 
 ## 3. Install the toolchain
 
 Assuming you have used the paths suggested in the previous steps, run:
 
 ```bash
-docker run --rm -it -v elkvolume:/workdir crops/extsdk-container --url /workdir/elk-glibc-x86_64-elk-sika-image-dev-aarch64-raspberrypi3-64-toolchain-1.0.sh
+docker run --rm -it -v elkvolume:/workdir crops/extsdk-container --url /workdir/elk-glibc-x86_64-elk-sika-image-dev-cortexa7t2hf-neon-vfpv4-raspberrypi3-toolchain-1.0.sh
 ```
+
+(Note that you might have to replace the filename of the toolchain istaller with the one downloaded and copied to the volume)
 
 This will exctract and setup the toolchain in your Docker container. The whole process should take few minutes and when finished you will have access to a shell with the environment properly set up for cross-compilation.
 
