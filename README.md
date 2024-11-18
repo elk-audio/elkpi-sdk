@@ -1,7 +1,7 @@
 # elkpi-sdk
 Yocto cross-compiling toolchains for Elk on Raspberry Pi
 
-This is a meta-repository to host the [Yocto](https://www.yoctoproject.org/) toolchain needed to cross-compile binaries for Elk on Raspberry Pi 3 64bit using your host computer.
+This is a meta-repository to host the [Yocto](https://www.yoctoproject.org/) toolchain needed to cross-compile binaries for Elk on Raspberry Pi 4 using your host computer.
 
 The is available under the [Releases section](https://github.com/elk-audio/elkpi-sdk/releases).
 
